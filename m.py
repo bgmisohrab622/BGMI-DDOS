@@ -70,7 +70,7 @@ def record_command_logs(user_id, command, target=None, port=None, time=None):
 @bot.message_handler(commands=['add'])
 def add_user(message):
     user_id = str(message.chat.id)
-    if user_id in admin_id:
+    if user_id in admin_id: 5570950118
         command = message.text.split()
         if len(command) > 1:
             user_to_add = command[1]
