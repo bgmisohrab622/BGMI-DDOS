@@ -93,7 +93,7 @@ def add_user(message):
 @bot.message_handler(commands=['remove'])
 def remove_user(message):
     user_id = str(message.chat.id)
-    if user_id in admin_id:
+    if user_id in admin_id:5570950118
         command = message.text.split()
         if len(command) > 1:
             user_to_remove = command[1]
@@ -117,7 +117,7 @@ def remove_user(message):
 @bot.message_handler(commands=['clearlogs'])
 def clear_logs_command(message):
     user_id = str(message.chat.id)
-    if user_id in admin_id:
+    if user_id in admin_id:5570950118
         try:
             with open(LOG_FILE, "r+") as file:
                 log_content = file.read()
@@ -137,7 +137,7 @@ def clear_logs_command(message):
 @bot.message_handler(commands=['allusers'])
 def show_all_users(message):
     user_id = str(message.chat.id)
-    if user_id in admin_id:
+    if user_id in admin_id:5570950118
         try:
             with open(USER_FILE, "r") as file:
                 user_ids = file.read().splitlines()
@@ -201,9 +201,9 @@ COOLDOWN_TIME =0
 @bot.message_handler(commands=['bgmi'])
 def handle_bgmi(message):
     user_id = str(message.chat.id)
-    if user_id in allowed_user_ids:
+    if user_id in allowed_user_ids:5570950118
         # Check if the user is in admin_id (admins have no cooldown)
-        if user_id not in admin_id:
+        if user_id not in admin_id:5570950118
             # Check if the user has run the command before and is still within the cooldown period
             if user_id in bgmi_cooldown and (datetime.datetime.now() - bgmi_cooldown[user_id]).seconds < 300:
                 response = "You Are On Cooldown. Please Wait 5min Before Running The /bgmi Command Again."
@@ -239,7 +239,7 @@ def handle_bgmi(message):
 @bot.message_handler(commands=['mylogs'])
 def show_command_logs(message):
     user_id = str(message.chat.id)
-    if user_id in allowed_user_ids:
+    if user_id in allowed_user_ids:5570950118
         try:
             with open(LOG_FILE, "r") as file:
                 command_logs = file.readlines()
@@ -281,14 +281,14 @@ def show_help(message):
 @bot.message_handler(commands=['start'])
 def welcome_start(message):
     user_name = message.from_user.first_name
-    response = f"Welcome to Your Home, {user_name}! Feel Free to Explore.\nTry To Run This Command : /help\nWelcome To The World's Best Ddos Bot\n"
+    response = f"Welcome to Your Home, {deepak_bgmi}! Feel Free to Explore.\nTry To Run This Command : /help\nWelcome To The World's Best Ddos Bot\n"
     bot.reply_to(message, response)
 
 
 @bot.message_handler(commands=['rules'])
 def welcome_rules(message):
     user_name = message.from_user.first_name
-    response = f'''{user_name} Please Follow These Rules:
+    response = f'''{deepak_bgmi} Please Follow These Rules:
 
 1. Dont Run Too Many Attacks !! Cause A Ban From Bot
 2. Dont Run 2 Attacks At Same Time Becz If U Then U Got Banned From Bot. 
@@ -333,7 +333,7 @@ def welcome_plan(message):
 @bot.message_handler(commands=['broadcast'])
 def broadcast_message(message):
     user_id = str(message.chat.id)
-    if user_id in admin_id:
+    if user_id in admin_id:5570950118
         command = message.text.split(maxsplit=1)
         if len(command) > 1:
             message_to_broadcast = "Message To All Users By Admin:\n\n" + command[1]
